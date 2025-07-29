@@ -88,17 +88,17 @@ contactForm.addEventListener('submit', (e) => {
 
     // Basic validation
     if (!name || !email || !subject || !message) {
-        showNotification('Please fill in all fields', 'error');
+        showNotification('Mohon lengkapi semua field yang diperlukan', 'error');
         return;
     }
 
     if (!isValidEmail(email)) {
-        showNotification('Please enter a valid email address', 'error');
+        showNotification('Mohon masukkan alamat email yang valid', 'error');
         return;
     }
 
     // Simulate form submission (replace with actual form handling)
-    showNotification('Thank you! Your message has been sent successfully.', 'success');
+    showNotification('Terima kasih! Pesan Anda telah berhasil dikirim.', 'success');
     contactForm.reset();
 });
 
@@ -233,8 +233,7 @@ function typeWriter(element, text, speed = 100) {
 window.addEventListener('load', () => {
     const heroName = document.querySelector('.hero-name');
     if (heroName) {
-        const originalText = heroName.textContent;
-        typeWriter(heroName, originalText, 150);
+        typeWriter(heroName, 'Alvi Syahputra', 150);
     }
 });
 
